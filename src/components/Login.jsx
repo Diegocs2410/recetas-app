@@ -4,7 +4,7 @@ import { ContextUser } from '../providers/UserProvider';
 
 export const Login = () => {
   const [userData, setUserData] = useState({ emial: '', password: '' });
-  const { login, setLogin } = ContextUser();
+  const { setLogin } = ContextUser();
   // Importamos el hook History
   const history = useHistory();
   // Funcion para guardar los datos de los input
@@ -19,9 +19,12 @@ export const Login = () => {
     e.preventDefault();
     const { email, password } = userData;
     if (email === 'admin@admin.com' && password === '123') {
-      alert('Ingreso exitoso');
+      localStorage.setItem('login', true);
+      setLogin(true);
       history.push('/root');
     } else {
+      localStorage.setItem('login', false);
+      setLogin(false);
       alert('correo/password incorrecto, por favor intente nuevamente');
     }
   };

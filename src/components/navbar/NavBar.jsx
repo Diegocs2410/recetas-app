@@ -1,14 +1,25 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
+import { useHistory } from 'react-router';
+import { ContextUser } from '../../providers/UserProvider';
 
 export const NavBar = () => {
+  // Funcion logout para salir de la aplicacion
+  const { login, setLogin } = ContextUser();
+  const history = useHistory();
+  const logout = () => {
+    localStorage.setItem('login', false);
+    setLogin(false);
+    history.push('/');
+  };
   return (
-    <nav class='navbar navbar-expand-lg navbar-dark bg-dark'>
-      <div class='container'>
-        <a class='navbar-brand' href='/'>
+    <nav className='navbar navbar-expand-lg navbar-dark bg-dark'>
+      <div className='container'>
+        <NavLink className='navbar-brand' to='/'>
           RecetasApp
-        </a>
+        </NavLink>
         <button
-          class='navbar-toggler'
+          className='navbar-toggler'
           type='button'
           data-bs-toggle='collapse'
           data-bs-target='#navbarSupportedContent'
@@ -16,21 +27,28 @@ export const NavBar = () => {
           aria-expanded='false'
           aria-label='Toggle navigation'
         >
-          <span class='navbar-toggler-icon'></span>
+          <span className='navbar-toggler-icon'></span>
         </button>
-        <div class='collapse navbar-collapse' id='navbarSupportedContent'>
-          <ul class='navbar-nav ms-auto mb-2 mb-lg-0'>
-            <li class='nav-item'>
-              <a class='nav-link active' aria-current='page' href='/root'>
-                Home
-              </a>
-            </li>
-            <li class='nav-item'>
-              <a class='nav-link' href='/'>
-                Salir
-              </a>
-            </li>
-          </ul>
+        <div className='collapse navbar-collapse' id='navbarSupportedContent'>
+          {login && (
+            <ul className='navbar-nav ms-auto mb-2 mb-lg-0'>
+              <li className='nav-item'>
+                <NavLink
+                  className='nav-link'
+                  aria-current='page'
+                  activeClassName='active'
+                  to='/root'
+                >
+                  Home
+                </NavLink>
+              </li>
+              <li className='nav-item'>
+                <NavLink className='nav-link' to='/' activeClassName='active' onClick={logout}>
+                  Salir
+                </NavLink>
+              </li>
+            </ul>
+          )}
         </div>
       </div>
     </nav>

@@ -1,8 +1,11 @@
-import { useContext, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { UserContext } from '../context/UserContext';
 
 const UserProvider = (props) => {
   const [login, setLogin] = useState(false);
+  useEffect(() => {
+    localStorage.getItem('login') === 'true' ? setLogin(true) : setLogin(false);
+  }, []);
 
   const value = {
     login,
