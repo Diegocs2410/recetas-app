@@ -18,7 +18,7 @@ const ContextUser = () => {
   const context = useContext(UserContext);
   if (!context) {
     throw new Error(
-      'El contexto no se encuentra dentro del provider, debe elevar el provider para ello'
+      'El contexto no se encuentra dentro del provider, debe elevar el provider para acceder al contexto'
     );
   }
   return context;

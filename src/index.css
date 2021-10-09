@@ -12,3 +12,15 @@
   background: url('./img/recetas.jpeg');
   height: 450px;
 }
+.img-svg {
+  background: url('./img/wave.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.card-img-top:hover {
+  transform: scale(1.02);
+  transition: all 0.3s ease-in-out;
+}
+.card-img-top {
+  transition: all 0.3s ease-in-out;
+}
