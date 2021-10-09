@@ -29,7 +29,7 @@ export const Login = () => {
     }
   };
   return (
-    <div style={{ overflow: 'hidden' }} >
+    <div style={{ overflow: 'hidden' }}>
       <svg
         preserveAspectRatio='none'
         viewBox='0 0 1200 120'
@@ -60,7 +60,7 @@ export const Login = () => {
                 value={userData.password}
                 onChange={handleOnChange}
               />
-              <button type='submit' className='btn btn-primary form-control mt-2'>
+              <button type='submit' className='btn btn-primary form-control my-2'>
                 Iniciar Sesión
               </button>
             </form>
