@@ -29,32 +29,42 @@ export const Login = () => {
     }
   };
   return (
-    <div className='container'>
-      <div className='row'>
-        <div className='col-md-8 col-lg-6 imgLogin order-2'></div>
-        <div className='col-md-4'>
-          <h2 className='display-3 text-center'>Login</h2>
-          <form onSubmit={hanldeSubmit}>
-            <input
-              type='email'
-              className='form-control mt-2'
-              placeholder='email@email.com'
-              name='email'
-              value={userData.email}
-              onChange={handleOnChange}
-            />
-            <input
-              type='password'
-              className='form-control mt-2'
-              placeholder='Password'
-              name='password'
-              value={userData.password}
-              onChange={handleOnChange}
-            />
-            <button type='submit' className='btn btn-primary form-control mt-2'>
-              Iniciar Sesión
-            </button>
-          </form>
+    <div style={{ overflow: 'hidden' }} >
+      <svg
+        preserveAspectRatio='none'
+        viewBox='0 0 1200 120'
+        xmlns='http://www.w3.org/2000/svg'
+        style={{ fill: '#F5C6A5', width: '113%', height: 182, transform: 'scaleX(-1)' }}
+      >
+        <path d='M321.39 56.44c58-10.79 114.16-30.13 172-41.86 82.39-16.72 168.19-17.73 250.45-.39C823.78 31 906.67 72 985.66 92.83c70.05 18.48 146.53 26.09 214.34 3V0H0v27.35a600.21 600.21 0 00321.39 29.09z' />
+      </svg>
+      <div className='container '>
+        <div className='row '>
+          <div className='col-md-8 col-lg-6 imgLogin order-2 m-2 mx-auto'></div>
+          <div className='col-md-4 m-2 my-auto mx-auto '>
+            <h2 className='display-3 text-center title-login'>Login</h2>
+            <form onSubmit={hanldeSubmit}>
+              <input
+                type='email'
+                className='form-control mt-2'
+                placeholder='email@email.com'
+                name='email'
+                value={userData.email}
+                onChange={handleOnChange}
+              />
+              <input
+                type='password'
+                className='form-control mt-2'
+                placeholder='Password'
+                name='password'
+                value={userData.password}
+                onChange={handleOnChange}
+              />
+              <button type='submit' className='btn btn-primary form-control mt-2'>
+                Iniciar Sesión
+              </button>
+            </form>
+          </div>
         </div>
       </div>
     </div>

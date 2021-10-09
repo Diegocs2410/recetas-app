@@ -17,13 +17,7 @@ export const Root = () => {
   useEffect(() => {
     const { q = '' } = queryString.parse(location.search);
     if (q === '') {
-      return setRecipes([
-        {
-          ok: true,
-          idMeal: '',
-          strMeal: '',
-        },
-      ]);
+      return setRecipes([]);
     } else {
       getRecipes(q);
     }

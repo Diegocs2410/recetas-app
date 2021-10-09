@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Explora&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;700;900&display=swap');
 * {
   font-family: 'Open Sans', sans-serif;
 }
@@ -15,6 +16,10 @@ body {
   width: 100%;
   background: url('./img/recetas.jpeg');
   height: 450px;
+  border-start-end-radius: 50px;
+  border-end-start-radius: 50px;
+  background-size: cover;
+  box-shadow: 10px 5px 5px #e9a468;
 }
 .img-svg {
   /* background: url('./img/wave.svg');
@@ -57,4 +62,14 @@ body {
   font-size: 4rem;
   color: #9d84b7;
   font-weight: bold;
+}
+.div-fondo {
+  background: url(./img/waveDiv.svg);
+}
+.title-login {
+  font-family: 'Montserrat Alternates', sans-serif;
+  letter-spacing: 2px;
+  color: #9d84b7;
+  font-size: 30px;
+  font-weight: 900;
 }
