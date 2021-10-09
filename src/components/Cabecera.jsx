@@ -1,4 +1,5 @@
 import React from 'react';
+import imageCab from '../img/imgRams (2).png';
 
 export const Cabecera = () => {
   return (
@@ -12,7 +13,7 @@ export const Cabecera = () => {
         </p>
       </div>
       <div className='col-lg-4 offset-lg-1 p-0 overflow-hidden shadow-lg'>
-        <img src='./img/imgRams.jpg' alt='img Ramsey' className='img-fluid' />
+        <img src={imageCab} alt='img Ramsey' className='img-fluid img-cab' />
       </div>
     </div>
   );

@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Explora&display=swap');
 * {
   font-family: 'Open Sans', sans-serif;
+}
+body {
+  background-color: #cdf2ca !important;
 }
 @media screen and (min-width: 768px) {
   .container .row {
@@ -13,14 +17,44 @@
   height: 450px;
 }
 .img-svg {
-  background: url('./img/wave.svg');
+  /* background: url('./img/wave.svg');
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: cover; */
+  background-color: #000000;
+  background-image: linear-gradient(147deg, #000000 0%, #2c3e50 74%);
+  color: #ddd;
 }
 .card-img-top:hover {
-  transform: scale(1.02);
+  transform: scale(1.04);
   transition: all 0.3s ease-in-out;
 }
 .card-img-top {
   transition: all 0.3s ease-in-out;
+}
+.tit-card {
+  color: #ffc898;
+  font-weight: bold !important;
+  transition: all 0.3s ease-in-out;
+}
+.tit-card + p {
+  font-size: 1rem;
+}
+.tit-card:hover {
+  color: #e9a468;
+  transition: all 0.3s ease-in-out;
+}
+.img-cab {
+  border: none;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.img-card-rec {
+  max-width: 650;
+}
+.titulo-recipe {
+  font-family: 'Explora', cursive;
+  font-size: 4rem;
+  color: #9d84b7;
+  font-weight: bold;
 }

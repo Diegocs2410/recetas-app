@@ -60,16 +60,21 @@ export const Root = () => {
         <h1 className='text-center px-3 pt-2 '>Results</h1>
         <div className='row mt-1'>
           {recipes?.map((recipe) => (
-            <ModalRecipe key={recipe.idMeal} className='col-md-6 col-lg-4'>
-              <div className='card m-1 shadow'>
+            <ModalRecipe
+              key={recipe.idMeal}
+              className='col-md-6 col-lg-4 col-xxl-3 '
+              recipe={recipe}
+            >
+              <div className='card m-1 shadow-lg p-2'>
                 <img
                   src={recipe.strMealThumb}
-                  className='card-img-top efecto'
+                  className='card-img-top efecto p-2 border-5'
                   alt='imagen receta'
+                  style={{ maxWidth: 700, maxHeight: 450, margin: '0 auto', borderRadius: '15px' }}
                 />
                 <div className='card-body'>
-                  <h3 className='card-title'>{recipe.strMeal} </h3>
-                  <p className='ms-3 card-text lead'>
+                  <h4 className='card-title tit-card'>{recipe.strMeal} </h4>
+                  <p className='ms-3 card-text lead text-secondary'>
                     <span classname='fw-bold'>Category:</span> {recipe.strCategory}
                   </p>
                 </div>
