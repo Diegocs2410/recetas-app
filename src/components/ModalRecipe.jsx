@@ -1,8 +1,8 @@
 import { useState } from 'react';
-import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
+import { Modal } from 'reactstrap';
 
 const ModalRecipe = (props) => {
-  const { className, recipe, children } = props;
+  const { className, recipe } = props;
   const [modal, setModal] = useState(false);
 
   const toggle = () => setModal(!modal);
