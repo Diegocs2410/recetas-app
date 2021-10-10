@@ -5,7 +5,7 @@
   font-family: 'Open Sans', sans-serif;
 }
 body {
-  background-color: #cdf2ca !important;
+  background-color: #FFDEFA !important;
 }
 /* @media screen and (min-width: 768px) {
   .container .row {
@@ -67,10 +67,9 @@ body {
   background: url(./img/waveDiv.svg);
 }
 .title-login {
-  font-family: 'Montserrat Alternates', sans-serif;
   letter-spacing: 2px;
-  color: #9d84b7;
-  font-size: 30px;
+  color: #3e3d3d;
+  font-size: 20px;
   font-weight: 900;
 }
 @media screen and (max-width: 768px) {
