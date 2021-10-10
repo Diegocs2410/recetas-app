@@ -40,8 +40,8 @@ export const Login = () => {
       </svg>
       <div className='container '>
         <div className='row '>
-          <div className='col-md-8 col-lg-6 imgLogin order-2 m-2 mx-auto'></div>
-          <div className='col-md-4 m-2 my-auto mx-auto '>
+          <div className='col-md-8 col-lg-6 imgLogin order-2 order-md-0 order-lg-0 m-2 mx-auto'></div>
+          <div className='col-md-4 m-2 my-md-auto mx-md-auto order-0 '>
             <h2 className='display-3 text-center title-login'>Login</h2>
             <form onSubmit={hanldeSubmit}>
               <input
