@@ -67,13 +67,13 @@ export const Root = () => {
             {recipes?.map((recipe) => (
               <ModalRecipe
                 key={recipe.idMeal}
-                className='col-md-6 col-lg-4 col-xxl-3 '
+                className='col-md-6 col-lg-4 col-xxl-3 img-fluid'
                 recipe={recipe}
               >
                 <div className='card m-1 shadow-lg p-2'>
                   <img
                     src={recipe.strMealThumb}
-                    className='card-img-top efecto p-2 border-5'
+                    className='card-img-top efecto p-2 border-5 '
                     alt='imagen receta'
                     style={{
                       maxWidth: 700,

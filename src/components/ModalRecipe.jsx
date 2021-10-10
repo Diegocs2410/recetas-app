@@ -12,7 +12,7 @@ const ModalRecipe = (props) => {
       <div onClick={toggle} className={className}>
         {props.children}
       </div>
-      <Modal isOpen={modal} toggle={toggle} style={{ minWidth: 900 }}>
+      <Modal isOpen={modal} toggle={toggle}>
         <h2 className='text-center titulo-recipe'> {recipe.strMeal} </h2>
         {props.children}
         <div className='p2 m-2'>
