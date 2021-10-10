@@ -31,6 +31,7 @@ export const Login = () => {
   return (
     <div style={{ overflow: 'hidden' }}>
       <svg
+        id='svg-login'
         preserveAspectRatio='none'
         viewBox='0 0 1200 120'
         xmlns='http://www.w3.org/2000/svg'
